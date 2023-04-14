@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e0374b34cb.js" crossorigin="anonymous"></script>
+    <script>
+        
+       </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:wght@300&family=Poppins&family=Raleway:wght@300&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        overflow-x: hidden;
+        min-height: 100vh;
+    }
+    .header{
+        width: 100%;
+        height: 70px;
+        background-color: #030b78;
+        position: relative;
+    }
+
+    .header-container{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-inline: auto;
+        margin: 0 auto;
+    }
+    .list{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .acc-dropdown{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 70px;
+        background-color: aqua;
+        width: 200px;
+        right: 0;
+        text-align: center;
+    }
+    .list-item-drop {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .acc-dropdown h3{
+        margin: 15px 0;
+    }
+
+    .hide-dropdown{
+        display: none;
+    }
+    h3{
+        cursor: pointer;
+    }
+    .burger{
+        display: none;
+    }
+    .right-con{
+        display: flex; 
+    }
+    .cart{
+        margin-right: 20px;
+    }
+    .header-list{
+            display: flex;
+        }
+    @media screen and (min-width: 768px) {
+        .header-list{
+            height: 100%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .list{
+            position: absolute;
+            top: 70px;
+            right: 0;
+            width: 200px;
+            min-height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding-top: 40px;
+            background-color: red;
+            gap: 0;
+            /* margin: 0; */
+            transform: translatex(100%);
+            transition: all 0.2s ease-in-out;
+
+        }
+        .list-item{
+            width: calc(100% - 20px);
+            /* text-align: center;
+            justify-content: start;
+            align-items: start; */
+            margin-left: 20px;
+        }
+
+        .list-item-drop{
+            height: fit-content;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        .dropdown-click{
+            /* width: 100%; */
+            text-align: center;
+        }
+        .burger{
+            display: flex;
+        }
+        .acc-dropdown{
+            position: absolute;
+            flex-direction: column;
+            gap: 10px;
+            top: 70px;
+            background-color: aqua;
+            width: 100%;
+            right: 0;
+            text-align: center;
+            top:40px;
+            overflow: hidden;
+            height: 190px;
+
+        }
+        .right-con{
+            display: flex;
+            align-items: center;
+
+        }
+        .list-item-cart{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+        }
+        .show{
+            transform: translateX(0%);
+            transition: all 0.2s ease-in-out;
+        }
+        @keyframes drops {
+            0%{
+                height: 0px;
+            }
+            100%{
+                height: 190px;
+            } 
+        }
+        @keyframes dropout {
+            0%{
+                height: 190px;
+            }
+            100%{
+                height: 0px;
+            } 
+        }
+    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+             <div class="nav">
+                <div class="logo">LOGO</div>
+            </div>
+            <div class="header-list">
+                 <div class="list">
+                    <div class="list-item">
+                        <h3>Home</h3>
+                    </div>
+                    <div class="list-item">
+                        <h3>Home</h3>
+                    </div>
+                    <div class="list-item">
+                        <h3>Home</h3>
+                    </div> 
+                    <div class="list-item-drop">
+                        <h4 class="dropdown-click">my Account</h4>
+                        <div class="acc-dropdown hide-dropdown">
+                            <h3>login</h3>
+                            <h3>wishList</h3>
+                            <h3>logout</h3>
+                        </div>
+                    </div> 
+
+                </div>
+                <div class="right-con">
+                    <div class="list-item-cart">
+                        g
+                    </div>
+                    <div class="burger">
+                        <i class="fa fa-bars  kli" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+            
+
+        </div>
+        </header>
+
+        <script>
+            const dropdown = document.getElementsByClassName('dropdown-click')[0]
+            const dropList = document.getElementsByClassName('acc-dropdown')[0];
+            const navi = document.getElementsByClassName('kli')[0];
+            const ls = document.getElementsByClassName('list')[0];
+
+            dropdown.addEventListener('click',()=>{
+                dropList.classList.toggle('hide-dropdown');
+            })
+            navi.addEventListener('click',()=>{
+                ls.classList.toggle('show')
+            })
+        </script>
+</body>
+</html>
