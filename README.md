@@ -1,7 +1,7 @@
-# Game-Distribution-Platform
+# Game Distribution Platform
 I have chosen to use Html, CSS, PHP, JavaScript, Jquery, Bootstrap and MySQL to develop this project.
 
-# Design
+### Design
 <p align="">
   <img src="https://github.com/Mahelchandupa/Game-Distribution-Platform/assets/110615431/f5aadda1-dfb2-427c-bf68-a3d1f1e4c642" width="350" alt="Screenshot 1">
   <img src="https://github.com/Mahelchandupa/Game-Distribution-Platform/assets/110615431/0765bcfe-1301-4a75-bf6e-c73880ad55e8" width="350" alt="Screenshot 2">
